@@ -1,16 +1,5 @@
 # MIPS Processor in C
 
-![License][License] ![RPs][RPs]
-
-
-## Authors and acknowledgment
-- Shijie Wang (@wsj20010128) 
-- Tianrui Qi (@tianrui-qi) 
-- Keqian Wang (@KateW0912) 
-- Tianshu Chu (@rmfaker) 
-- Bozhi Deng
-
-
 ## License
 
 MIT License
