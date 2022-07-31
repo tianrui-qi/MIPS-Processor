@@ -39,7 +39,7 @@ The “input format” given above refers to the format of the assembly instruct
 
 ## Datapath / Design
 
-In *Computer Organization and Design, 5th edition* by David A. Patterson and John L. Hennessy, it provides us a datapath design that supports the instructions we need in Chapter 4.4 (A Simple Implementation Scheme) except jumpy and link (jal) and jump register (jr). We provide some modifications base on the design from that book to support all the instructions above. Our whole design of datapath is shown below.
+In *Computer Organization and Design, 5th edition* by David A. Patterson and John L. Hennessy, it provides us a datapath design in Chapter 4.4, A Simple Implementation Scheme, that supports the instructions we need except jumpy and link (jal) and jump register (jr). We provide some modifications base on the design from that book to support all the instructions above. Our whole design of datapath is shown below.
 
 ![Modified_Datapath](https://user-images.githubusercontent.com/74130971/182014394-f1fcf8b2-0b18-4643-81fb-797841ff6478.png)
 
