@@ -8,25 +8,19 @@ We will implement a full gate-level circuit representing the datapath for a redu
 
 Our ISA will include the following instructions:
 
-| I-type      | Description         | Input format            | Operation                      |
-|-------------|---------------------|-------------------------|--------------------------------|
-| lw          | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2 + offset]        |
-| sw          | Store Word          | sw reg1 reg2 offset     | M[reg2 + offset] = reg1        |
-| beq         | Banch on equal      | beq reg1 reg2 offset    | if (reg1 == reg2) PC += offset |
-| addi        | Add immediate       | addi reg1 reg2 constant | reg1 = reg2 + constant         |
-
-| R-type      | Description         | Input format            | Operation                      |
-|-------------|---------------------|-------------------------|--------------------------------|
-| and         | Logical AND         | and reg1 reg2 reg3      | reg1 = reg2 & reg3             |
-| or          | Logical OR          | or reg1 reg2 reg3       | reg1 = reg2 \| reg3            |
-| add         | Integer addition    | add reg1 reg2 reg3      | reg1 = reg2 + reg3             |
-| sub         | Integer subtraction | sub reg1 reg2 reg3      | reg1 = reg2 - reg3             |
-| slt         | Set less than       | slt reg1 reg2 reg3      | reg1=(reg2 < reg3? 1: 0)       |
-| jr          | Jump register       | jr reg1                 | PC = reg1                      |
-
-| J-type      | Description         | Input format            | Operation                      |
-|-------------|---------------------|-------------------------|--------------------------------|
-| j           | Jump                | j address               | PC = address                   |
-| jal         | Jump and link       | jal address             | RA = PC, PC = address          |
+| Instruction | Type   | Description         | Input format            | Operation                      |
+|-------------|--------|---------------------|-------------------------|--------------------------------|
+| lw          | I-type | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2+offset]          |
+| sw          | I-type | Store Word          | sw reg1 reg2 offset     | M[reg2+offset] = reg1          |
+| beq         | I-type | Banch on equal      | beq reg1 reg2 offset    | if (reg1 == reg2) PC += offset |
+| addi        | I-type | Add immediate       | addi reg1 reg2 constant | reg1 = reg2 + constant         |
+| and         | R-type | Logical AND         | and reg1 reg2 reg3      | reg1 = reg2 & reg3             |
+| or          | R-type | Logical OR          | or reg1 reg2 reg3       | reg1 = reg2 \| reg3            |
+| add         | R-type | Integer addition    | add reg1 reg2 reg3      | reg1 = reg2 + reg3             |
+| sub         | R-type | Integer subtraction | sub reg1 reg2 reg3      | reg1 = reg2 - reg3             |
+| slt         | R-type | Set less than       | slt reg1 reg2 reg3      | reg1=(reg2 < reg3? 1: 0)       |
+| jr          | R-type | Jump register       | jr reg1                 | PC = reg1                      |
+| j           | J-type | Jump                | j address               | PC = address                   |
+| jal         | J-type | Jump and link       | jal address             | RA = PC, PC = address          |
 
 The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through our circuit. We implement help functions to convert the opcode (6-bit), register (5-bit), and func (6-bit, only for R-type), and then integrate them to parse the input instructions into their 32-bit binary machine code representation. Note that for this project, we only consider these 9 registers below:
