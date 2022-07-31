@@ -11,11 +11,11 @@ There some rules we follow in our C implementation:
 
 Basically, we want to ensure that we use gates for all logical control and operations. No tricky workarounds are allowed.
 
-To use the code, store MIPS instruction in a file, i.e., example.txt, and run the following code:
+To use the code, store MIPS instruction in a file, i.e., example1.txt, and run the following code:
 ```
 gcc -c project.c
 gcc project.o
-./a.out < example.txt
+./a.out < example1.txt
 ```
 
 ## Supported Instructions
