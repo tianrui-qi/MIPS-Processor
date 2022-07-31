@@ -37,7 +37,7 @@ The “input format” given above refers to the format of the assembly instruct
 | sp       | 11101  | Stack pointer           |
 | ra       | 11111  | Return address          |  
 
-## Datapath / Design
+## Datapath Design
 
 In *Computer Organization and Design, 5th edition* by David A. Patterson and John L. Hennessy, it provides us a datapath design in Chapter 4.4, A Simple Implementation Scheme, that supports the instructions we need except jumpy and link (jal) and jump register (jr). We provide some modifications base on the design from that book to support all the instructions above. Our whole design of datapath is shown below.
 
