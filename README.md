@@ -66,6 +66,8 @@ We can implement the Control by sum of products (SOP), and the ALU Control by fo
 
 ## Example Input and Output
 
+Example 1:
+```
 bash$ cat arith.txt
 addi t0 zero 12
 addi t1 zero 13
@@ -98,7 +100,10 @@ PC: 5
 Instruction: 00000001000010010001000000100101
 Data: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Register: 0 0 13 0 12 0 0 0 12 13 0 0 0 0 0 0 25 -1 0 0 0 0 0 0 0 0 0 0 0 32 0 0
+```
 
+Example 2:
+```
 bash$ cat load_store.txt
 addi t0 zero 25
 add t1 t0 t0
@@ -142,3 +147,4 @@ PC: 7
 Instruction: 00100011101111010000000000000010
 Data: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25 50
 Register: 0 0 0 0 0 0 0 0 25 50 0 0 0 0 0 0 25 50 0 0 0 0 0 0 0 0 0 0 0 32 0 0
+```
