@@ -1,6 +1,6 @@
-# MIPS Processor in C
-
 [toc]
+
+# MIPS Processor in C
 
 ## Overview
 
