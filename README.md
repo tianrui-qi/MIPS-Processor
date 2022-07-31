@@ -23,4 +23,18 @@ Our ISA will include the following instructions:
 | j           | J-type | Jump                | j address               | PC = address                   |
 | jal         | J-type | Jump and link       | jal address             | RA = PC, PC = address          |
 
-The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through our circuit. We implement help functions to convert the opcode (6-bit), register (5-bit), and func (6-bit, only for R-type), and then integrate them to parse the input instructions into their 32-bit binary machine code representation. Note that for this project, we only consider these 9 registers below:
+The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through our circuit. We implement help functions to convert the opcode (6-bit), register (5-bit, except J-type), and func (6-bit, only for R-type), and then integrate them to parse the input instructions into their 32-bit binary machine code representation. Note that for this project, we only consider these 9 registers below:
+
+| Register | Binary | Use                     |
+|----------|--------|-------------------------|
+| zero     | 00000  | Constant value 0        |
+| v0       | 00010  | Return value register 0 |
+| a0       | 00100  | Argument register 0     |
+| t0       | 01000  | Temporary register 0    |
+| t1       | 01001  | Temporary register 1    |
+| s0       | 10000  | Saved register 0        |
+| s1       | 10001  | Saved register 1        |
+| sp       | 11101  | Stack pointer           |
+| ra       | 11111  | Return address          |  
+
+
