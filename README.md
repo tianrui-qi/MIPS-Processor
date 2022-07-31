@@ -18,7 +18,7 @@ gcc project.o
 ./a.out < example.txt
 ```
 
-## Supported Insturctions
+## Supported Instructions
 
 Our ISA will include the following instructions:
 
