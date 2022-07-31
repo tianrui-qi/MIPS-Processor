@@ -66,7 +66,7 @@ We can implement the Control by sum of products (SOP), and the ALU Control by fo
 
 ## Usage and Example
 
-To use the code, store MIPS instruction in a file, i.e., example.txt. Then, run the follow code:
+To use the code, store MIPS instruction in a file, i.e., example.txt, and run the following code:
 ```
 gcc -c project.c
 gcc project.o
