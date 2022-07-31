@@ -148,3 +148,7 @@ Instruction: 00100011101111010000000000000010
 Data: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25 50
 Register: 0 0 0 0 0 0 0 0 25 50 0 0 0 0 0 0 25 50 0 0 0 0 0 0 0 0 0 0 0 32 0 0
 ```
+
+## Reference
+
+1. Rensselaer Polytechnic Institute, CSCI 2500 Computer Organization by professor Konstantin Kuzmin, Group Project (document version 1.2), MIPS Processor in C. 
