@@ -153,4 +153,4 @@ Register: 0 0 0 0 0 0 0 0 25 50 0 0 0 0 0 0 25 50 0 0 0 0 0 0 0 0 0 0 0 32 0 0
 
 1. Rensselaer Polytechnic Institute, Fall 2021, CSCI 2500 Computer Organization by professor Konstantin Kuzmin, *MIPS Processor in C*. 
 2. *Computer Organization and Design, 5th edition* by David A. Patterson and John L. Hennessy, Chapter 4.4 A Simple Implementation Scheme.
-3. Rochester Institute of Technology, *Adding Support for jal to Single Cycle Datapath* [[link](http://meseec.ce.rit.edu/eecc550-winter2005/550-chapter5-exercises.pdf)]
+3. Rochester Institute of Technology, EECC 550 Computer Organization by Dr. Muhammad Shaaban, *Adding Support for jal to Single Cycle Datapath* [[link](http://meseec.ce.rit.edu/eecc550-winter2005/550-chapter5-exercises.pdf)]
