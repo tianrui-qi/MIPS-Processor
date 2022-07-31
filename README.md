@@ -57,3 +57,9 @@ We can implement the Control by sum of products, and the ALU Control by followin
 
 <img width="824" alt="Screen Shot 2022-07-31 at 04 10 11" src="https://user-images.githubusercontent.com/74130971/182016527-4c698d91-d19d-42ab-a2f5-c8c734974d7e.png">
 
+## Additional Rules
+
+1. No if and if-else logical control statements or equivalent.
+2. No different loop structures, i.e., basic for loops other than (for int i = 0; i < N; ++i).
+3. No calls to any external or library functions.
+Basically, we want to ensure that we use gates for all logical control and operations. No tricky workarounds are allowed.
