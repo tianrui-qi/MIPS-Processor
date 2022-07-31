@@ -15,9 +15,9 @@ Basically, we want to ensure that we use gates for all logical control and opera
 
 To use the code, store MIPS instruction in a file, i.e., example1.txt, and run the following code:
 ```
-gcc -c project.c
-gcc project.o
-./a.out < example1.txt
+$ gcc -c project.c
+$ gcc project.o
+$ ./a.out < example1.txt
 ```
 
 ## Supported Instructions
