@@ -37,4 +37,4 @@ The “input format” given above refers to the format of the assembly instruct
 | sp       | 11101  | Stack pointer           |
 | ra       | 11111  | Return address          |  
 
-
+## Datapath / Design
