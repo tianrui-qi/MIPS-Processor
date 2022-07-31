@@ -8,22 +8,22 @@ We will implement a full gate-level circuit representing the datapath for a redu
 
 Our ISA will include the following instructions:
 
-| Instruction | Type   | Description         | Input format            | Operation                      | op
-|-------------|--------|---------------------|-------------------------|--------------------------------| 
-| add         | R-type | Integer addition    | add reg1 reg2 reg3      | reg1 = reg2 + reg3             |
-| sub         | R-type | Integer subtraction | sub reg1 reg2 reg3      | reg1 = reg2 - reg3             |
-| and         | R-type | Logical AND         | and reg1 reg2 reg3      | reg1 = reg2 & reg3             |
-| or          | R-type | Logical OR          | or reg1 reg2 reg3       | reg1 = reg2 \| reg3            |
-| slt         | R-type | Set less than       | slt reg1 reg2 reg3      | reg1 = (reg2 < reg3 ? 1: 0)    |
-| jr          | R-type | Jump register       | jr reg1                 | PC = reg1                      |
-| j           | J-type | Jump                | j address               | PC = address                   |
-| jal         | J-type | Jump and link       | jal address             | RA = PC, PC = address          |
-| lw          | I-type | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2+offset]          |
-| sw          | I-type | Store Word          | sw reg1 reg2 offset     | M[reg2+offset] = reg1          |
-| beq         | I-type | Banch on equal      | beq reg1 reg2 offset    | if (reg1 == reg2) PC += offset |
-| addi        | I-type | Add immediate       | addi reg1 reg2 constant | reg1 = reg2 + constant         |
+| Instruction | Type   | Description         | Input format            | Operation                      | op     | func   |
+|-------------|--------|---------------------|-------------------------|--------------------------------|--------|--------|
+| add         | R-type | Integer addition    | add reg1 reg2 reg3      | reg1 = reg2 + reg3             | 000000 | 100000 |
+| sub         | R-type | Integer subtraction | sub reg1 reg2 reg3      | reg1 = reg2 - reg3             | 000000 | 100010 |
+| and         | R-type | Logical AND         | and reg1 reg2 reg3      | reg1 = reg2 & reg3             | 000000 | 100100 |
+| or          | R-type | Logical OR          | or reg1 reg2 reg3       | reg1 = reg2 \| reg3            | 000000 | 100101 |
+| slt         | R-type | Set less than       | slt reg1 reg2 reg3      | reg1 = (reg2 < reg3 ? 1: 0)    | 000000 | 101010 |
+| jr          | R-type | Jump register       | jr reg1                 | PC = reg1                      | 000000 | 001000 |
+| j           | J-type | Jump                | j address               | PC = address                   | 000010 |        |
+| jal         | J-type | Jump and link       | jal address             | RA = PC, PC = address          | 000011 |        |
+| beq         | I-type | Banch on equal      | beq reg1 reg2 offset    | if (reg1 == reg2) PC += offset | 000100 |        |
+| addi        | I-type | Add immediate       | addi reg1 reg2 constant | reg1 = reg2 + constant         | 001000 |        |
+| lw          | I-type | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2+offset]          | 100011 |        |
+| sw          | I-type | Store Word          | sw reg1 reg2 offset     | M[reg2+offset] = reg1          | 101011 |        |
 
-The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through our circuit. We implement help functions to convert the opcode (6-bit), register (5-bit, except J-type), and func (6-bit, only for R-type), and then integrate them to parse the input instructions into their 32-bit binary machine code representation. Note that for this project, we only consider these 9 registers below:
+The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through our circuit. We implement help functions to get the opcode (6-bit), register (5-bit, except J-type), and func (6-bit, only for R-type), and then integrate them to parse the input instructions into their 32-bit binary machine code representation. Note that for this project, we only consider these 9 registers below:
 
 | Register | Binary | Use                     |
 |----------|--------|-------------------------|
