@@ -74,9 +74,10 @@ addi t1 zero 13
 add s0 t0 t1
 sub s1 t0 t1
 and a0 t0 t1
-or v0t0t1
+or v0 t0 t1
 
-bash$ ./a.out < arith.txt PC: 0
+bash$ ./a.out < arith.txt 
+PC: 0
 Instruction: 00100000000010000000000000001100
 Data: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Register: 0 0 0 0 0 0 0 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32 0 0
