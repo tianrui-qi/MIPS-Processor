@@ -54,7 +54,7 @@ To implement jal, we change two Mux-2 near Registers Memory and Data Memeory int
 
 ![jr_design](https://user-images.githubusercontent.com/74130971/182014050-765d4840-8afe-456e-8b7b-dcb9345e6ef9.jpg)
 
-## Contorl
+## Contorl Design
 
 Since we modify some of the control signal, a new truth table for Control and ALU Control is shown below. 
 
