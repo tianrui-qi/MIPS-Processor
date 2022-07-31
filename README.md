@@ -1,5 +1,7 @@
 # MIPS Processor in C
 
+Another instruction is available at [Craft](https://www.craft.do/s/FpLeUcZV9xNpvJ)
+
 ## Overview
 
 We implement a full gate-level circuit representing the datapath for a reduced, but still Turing complete, MIPS instruction set architecture (ISA). We first implement logic gates like and, or, not, xor, and nand and then use them to build essential components, including memory, control, ALU, decoder, adder, multiplexor, etc. At length, we connect them by datapath. 
