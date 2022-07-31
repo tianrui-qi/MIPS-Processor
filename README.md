@@ -8,9 +8,9 @@ We will implement a full gate-level circuit representing the datapath for a redu
 
 Our ISA will include the following instructions:
 
-| Instruction | Type   | Description         | Input format            | Operation                      |
-|-------------|--------|---------------------|-------------------------|--------------------------------|
-| lw          | I-type | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2 + offset]        |
+| Instruction | Type   | Description         | Input format            | Operation                      | op
+|-------------|--------|---------------------|-------------------------|--------------------------------|-------
+| lw          | I-type | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2 + offset]        | 000000
 | sw          | I-type | Store Word          | sw reg1 reg2 offset     | M[reg2 + offset] = reg1        |
 | beq         | I-type | Banch on equal      | beq reg1 reg2 offset    | if (reg1 == reg2) PC += offset |
 | addi        | I-type | Add immediate       | addi reg1 reg2 constant | reg1 = reg2 + constant         |
