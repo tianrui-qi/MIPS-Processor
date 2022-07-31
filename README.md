@@ -8,15 +8,15 @@ We will implement a full gate-level circuit representing the datapath for a redu
 
 Our ISA will include the following instructions:
 
-| I-type      | Description         | Input format            | Operation                      | op
-|-------------|---------------------|-------------------------|--------------------------------|-------
-| lw          | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2 + offset]        | 000000
+| I-type      | Description         | Input format            | Operation                      |
+|-------------|---------------------|-------------------------|--------------------------------|
+| lw          | Load Word           | lw reg1 reg2 offset     | reg1 = M[reg2 + offset]        |
 | sw          | Store Word          | sw reg1 reg2 offset     | M[reg2 + offset] = reg1        |
 | beq         | Banch on equal      | beq reg1 reg2 offset    | if (reg1 == reg2) PC += offset |
 | addi        | Add immediate       | addi reg1 reg2 constant | reg1 = reg2 + constant         |
 
-| R-type      | Description         | Input format            | Operation                      | op
-|-------------|---------------------|-------------------------|--------------------------------|-------
+| R-type      | Description         | Input format            | Operation                      |
+|-------------|---------------------|-------------------------|--------------------------------|
 | and         | Logical AND         | and reg1 reg2 reg3      | reg1 = reg2 & reg3             |
 | or          | Logical OR          | or reg1 reg2 reg3       | reg1 = reg2 \| reg3            |
 | add         | Integer addition    | add reg1 reg2 reg3      | reg1 = reg2 + reg3             |
@@ -24,9 +24,9 @@ Our ISA will include the following instructions:
 | slt         | Set less than       | slt reg1 reg2 reg3      | reg1=(reg2 < reg3? 1: 0)       |
 | jr          | Jump register       | jr reg1                 | PC = reg1                      |
 
-| J-type      | Description         | Input format            | Operation                      | op
-|-------------|---------------------|-------------------------|--------------------------------|-------
+| J-type      | Description         | Input format            | Operation                      |
+|-------------|---------------------|-------------------------|--------------------------------|
 | j           | Jump                | j address               | PC = address                   |
 | jal         | Jump and link       | jal address             | RA = PC, PC = address          |
 
-The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through your circuit. Not that 
+The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through our circuit. We implement help functions to convert the opcode (6-bit), register (5-bit), and func (6-bit, only for R-type), and then integrate them to parse the input instructions into their 32-bit binary machine code representation. Note that for this project, we only consider these 9 registers below:
