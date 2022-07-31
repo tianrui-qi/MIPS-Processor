@@ -71,11 +71,18 @@ We can implement the Control by sum of products (SOP), and the ALU Control by fo
 
 <img width="824" alt="Screen Shot 2022-07-31 at 04 10 11" src="https://user-images.githubusercontent.com/74130971/182016527-4c698d91-d19d-42ab-a2f5-c8c734974d7e.png">
 
-## Example Input and Output
+## Usage and Example
+
+To use the code, store MIPS instruction in a file, i.e., example.txt. Then, run the follow code:
+```
+gcc -c project.c
+gcc project.o
+./a.out < example.txt
+```
 
 Example 1:
 ```
-bash$ cat arith.txt
+bash$ cat example1.txt
 addi t0 zero 12
 addi t1 zero 13
 add s0 t0 t1
@@ -83,7 +90,9 @@ sub s1 t0 t1
 and a0 t0 t1
 or v0 t0 t1
 
-bash$ ./a.out < arith.txt 
+bash$ gcc -c project.c
+bash$ gcc project.o
+bash$ ./a.out < example1.txt 
 PC: 0
 Instruction: 00100000000010000000000000001100
 Data: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -112,7 +121,7 @@ Register: 0 0 13 0 12 0 0 0 12 13 0 0 0 0 0 0 25 -1 0 0 0 0 0 0 0 0 0 0 0 32 0 0
 
 Example 2:
 ```
-bash$ cat load_store.txt
+bash$ cat example2.txt
 addi t0 zero 25
 add t1 t0 t0
 addi sp sp -2
@@ -122,7 +131,9 @@ lw s0 sp 0
 lw s1 sp 1
 addi sp sp 2
 
-bash$ ./a.out < load_store.txt
+bash$ gcc -c project.c
+bash$ gcc project.o
+bash$ ./a.out < example2.txt
 PC: 0
 Instruction: 00100000000010000000000000011001
 Data: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
