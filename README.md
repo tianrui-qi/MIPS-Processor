@@ -41,7 +41,7 @@ The “input format” given above refers to the format of the assembly instruct
 
 In *Computer Organization and Design, 5th edition* by David A. Patterson and John L. Hennessy, it provides us a datapath design that supports the instructions we need in Chapter 4.4 (A Simple Implementation Scheme) except jumpy and link (jal) and jump register (jr). We provide some modifications base on the design from that book to support all the instructions above. Our whole design of datapath is shown below.
 
-[Modified_Datapath.pdf](https://github.com/tianrui-qi/MIPS-Processor/files/9228209/Modified_Datapath.pdf)
+![Modified_Datapath](https://user-images.githubusercontent.com/74130971/182014394-f1fcf8b2-0b18-4643-81fb-797841ff6478.png)
 
 To implement jal, we change two Mux-2 near Registers Memory and Data Memeory into Mux-4, expand the control signal MemtoReg and RegDst to 2-bit, and add some necessary datapaths. To implement jr, we add a new 1-bit control signal called JMPReg that represent if the current instruction is jr or not. There are two ways to integrate the new signal JMPReg with the original datapath design, shown in figure below: add a new Mux-2 and treat JMPReg and Jump as two seperate 1-bit control signal, or change the Mux-2 into Mux-4 and combine Jump, JMPReg into a 2-bit signal. We choose to use the first design in our implementation. 
 
