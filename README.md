@@ -1,6 +1,6 @@
 # MIPS Processor in C
 
-Another instruction is available at [Craft](https://www.craft.do/s/FpLeUcZV9xNpvJ)
+Another version of instruction is available at [Craft](https://www.craft.do/s/FpLeUcZV9xNpvJ)
 
 ## Overview
 
