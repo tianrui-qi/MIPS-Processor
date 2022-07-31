@@ -60,7 +60,7 @@ Since we modify some of the control signal, a new truth table for Control and AL
 
 <img width="1340" alt="Screen Shot 2022-07-31 at 04 01 16" src="https://user-images.githubusercontent.com/74130971/182016131-8a0516cb-3e49-43e1-8c2a-3b17b8ffb591.png">
 
-We can implement the Control by sum of products, and the ALU Control by following the design below. 
+We can implement the Control by sum of products (SOP), and the ALU Control by following the design below. 
 
 <img width="824" alt="Screen Shot 2022-07-31 at 04 10 11" src="https://user-images.githubusercontent.com/74130971/182016527-4c698d91-d19d-42ab-a2f5-c8c734974d7e.png">
 
