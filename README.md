@@ -62,4 +62,5 @@ We can implement the Control by sum of products, and the ALU Control by followin
 1. No if and if-else logical control statements or equivalent.
 2. No different loop structures, i.e., basic for loops other than (for int i = 0; i < N; ++i).
 3. No calls to any external or library functions.
+
 Basically, we want to ensure that we use gates for all logical control and operations. No tricky workarounds are allowed.
