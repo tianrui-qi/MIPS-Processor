@@ -14,13 +14,19 @@ Our ISA will include the following instructions:
 | sw          | I-type | Store Word          | sw reg1 reg2 offset     | M[reg2 + offset] = reg1        |
 | beq         | I-type | Banch on equal      | beq reg1 reg2 offset    | if (reg1 == reg2) PC += offset |
 | addi        | I-type | Add immediate       | addi reg1 reg2 constant | reg1 = reg2 + constant         |
-| and         | R-type | Logical AND         | and reg1 reg2 reg3      | reg1 = reg2 & reg3             |
-| or          | R-type | Logical OR          | or reg1 reg2 reg3       | reg1 = reg2 \| reg3            |
-| add         | R-type | Integer addition    | add reg1 reg2 reg3      | reg1 = reg2 + reg3             |
-| sub         | R-type | Integer subtraction | sub reg1 reg2 reg3      | reg1 = reg2 - reg3             |
-| slt         | R-type | Set less than       | slt reg1 reg2 reg3      | reg1=(reg2 < reg3? 1: 0)       |
-| jr          | R-type | Jump register       | jr reg1                 | PC = reg1                      |
-| j           | J-type | Jump                | j address               | PC = address                   |
-| jal         | J-type | Jump and link       | jal address             | RA = PC, PC = address          |
+
+| R-type      | Description         | Input format            | Operation                      | op
+|-------------|---------------------|-------------------------|--------------------------------|-------
+| and         | Logical AND         | and reg1 reg2 reg3      | reg1 = reg2 & reg3             |
+| or          | Logical OR          | or reg1 reg2 reg3       | reg1 = reg2 \| reg3            |
+| add         | Integer addition    | add reg1 reg2 reg3      | reg1 = reg2 + reg3             |
+| sub         | Integer subtraction | sub reg1 reg2 reg3      | reg1 = reg2 - reg3             |
+| slt         | Set less than       | slt reg1 reg2 reg3      | reg1=(reg2 < reg3? 1: 0)       |
+| jr          | Jump register       | jr reg1                 | PC = reg1                      |
+
+| J-type      | Description         | Input format            | Operation                      | op
+|-------------|---------------------|-------------------------|--------------------------------|-------
+| j           | Jump                | j address               | PC = address                   |
+| jal         | Jump and link       | jal address             | RA = PC, PC = address          |
 
 The “input format” given above refers to the format of the assembly instructions we’ll parse, convert to machine code, and then process through your circuit. Not that 
