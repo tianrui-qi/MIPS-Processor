@@ -1,5 +1,3 @@
-[toc]
-
 # MIPS Processor in C
 
 ## Overview
