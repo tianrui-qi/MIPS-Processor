@@ -38,3 +38,5 @@ The “input format” given above refers to the format of the assembly instruct
 | ra       | 11111  | Return address          |  
 
 ## Datapath / Design
+
+In *Computer Organization and Design, 5th edition* by David A. Patterson and John L. Hennessy, it provides us a datapath design that supports the instructions we need in Chapter 4.4 (A Simple Implementation Scheme) except jumpy and link (jal) and jump register (jr). To implement jal, we change two Mux-2 near Registers Memory and Data Memeory into Mux-4, expand the control signal MemtoReg and RegDst to 2-bit, and add some necessary datapaths. To implement jr, we add a new 1-bit control signal called JMPReg that represent if the current instruction is jr or not. There are two ways to integrate the new signal JMPReg with the design shown in figure below: ![jr_design](https://user-images.githubusercontent.com/74130971/182014050-765d4840-8afe-456e-8b7b-dcb9345e6ef9.jpg)
