@@ -5,7 +5,6 @@
 We will implement a full gate-level circuit representing the datapath for a reduced, but still Turing complete, MIPS instruction set architecture (ISA). We first implement logic gates like and, or, not, xor, and nand and then use them to build essential componnets, including memory, control, ALU, decoder, adder, multiplexor, etc. At length, we connect them by datapath. 
 
 There some rules we follow in our C implementation:
-
 1. No if and if-else logical control statements or equivalent.
 2. No different loop structures, i.e., basic for loops other than (for int i = 0; i < N; ++i).
 3. No calls to any external or library functions.
