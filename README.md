@@ -8,12 +8,12 @@ We implement a full gate-level circuit representing the datapath for a reduced, 
 
 There some rules we follow in our C implementation:
 1. No if and if-else logical control statements or equivalent.
-2. No different loop structures, i.e., basic for loops other than (for int i = 0; i < N; ++i).
+2. No different loop structures, i.e., basic for loops other than `for int i = 0; i < N; ++i`.
 3. No calls to any external or library functions.
 
 Basically, we want to ensure that we use gates for all logical control and operations. No tricky workarounds are allowed.
 
-To use the code, store MIPS instruction in a file, i.e., example1.txt, and run the following code:
+To use the code, store MIPS instruction in a file, i.e., `example1.txt`, and run the following code:
 ```
 $ gcc -c project.c
 $ gcc project.o
