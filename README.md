@@ -1,6 +1,6 @@
 # MIPS Processor in C
 
-Another version of instruction is available at [Craft](https://www.craft.do/s/FpLeUcZV9xNpvJ) (same to this `README.md`). 
+Another version of instruction is available at [Notion](https://tianrui-qi.notion.site/MIPS-Processor-in-C-459f89fa9ff04ec99109de1ed25f3546) (same to this `README.md`). 
 
 ## Overview
 
